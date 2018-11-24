@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Thymeleaf的分支和循环</title>
+</head>
+<body>
+<h1>分支：</h1>
+    <div th:if="${ishave}">
+        <h1>我显示</h1>
+    </div>
+<h1>循环：</h1>
+<ol th:each="s :${students}">
+    <li th:text="${s.name} "></li>
+</ol>
+<h1>Map集合遍历：</h1>
+<ul th:each="m:${map1}">
+    <li th:text="${m}"></li>
+    <li th:each="e:${m}" th:text="${e.key}"></li>
+    <li th:each="e:${m}" th:text="${e.value}"></li>
+</ul>
+</body>
+</html>
